@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #FAF0E6;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95vw;
+    height: 95vh;
+}
+
+img{
+    margin-top: 10px;
+}
+
+h1{
+    color: #66bbff;
+    font-size: 3em;
+    font-weight: 700;
+}
+.botao{
+    text-decoration: none;
+    background-color: #66bbff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.botao:hover{
+    background-color: #376488;
+    transition: all 0.2s;
+}
