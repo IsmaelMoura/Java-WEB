@@ -4,7 +4,8 @@
 body{
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #FAF0E6;
+    background: rgb(250,240,230);
+    background: radial-gradient(circle, rgba(250,240,230,1) 0%, rgba(203,191,179,1) 100%);
 }
 
 .container{
@@ -14,10 +15,6 @@ body{
     flex-direction: column;
     width: 95vw;
     height: 95vh;
-}
-
-img{
-    margin-top: 10px;
 }
 
 h1{
@@ -37,5 +34,5 @@ h1{
 
 .botao:hover{
     background-color: #376488;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
