@@ -23,7 +23,7 @@
 ## Teste do Servlet
 ~~~java
 1.1 ## Criando um Web Project
-	1.2 src/main/java
+	1.2 <src/main/java>
 	1.3 (right click) ? new Package
 	
 2.1 (right click) > 'no pacote criado'
@@ -55,11 +55,29 @@
 	<%= new Date() %>
 	<%! int number = 0; %>
 	<%= number += 1 %>
-		
-		<% %> - text operator
-		<%! %> - variable operator
-		<%= %> - expretion operator
-		<%-- --%> - comentary
 </body>
 ~~~
 
+*<% %> - text operator
+<%! %> - variable operator
+<%= %> - expretion operator
+<%-- --%> - comentary*
+
+## DAO / JavaBeans
+~~~java
+> project
+	> src/main/java
+		> model
+		new > Class
+		<name> = DAO
+		
+		new > Class
+		<name> = JavaBeans
+		
+~~~
+
+## UrlPatterns
+Camada Controller
+~~~java
+@WebServlet(urlPatterns = {"/Controller","/main"})
+~~~
