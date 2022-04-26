@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<title>Agenda de Contatos</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="icon" href="imagens/fone.png" />
+</head>
+<body>
+	<h1>Criar Novo Contato</h1>
+	<form name="formContato" action="inserir-produto">
+		<table>
+			<tr>
+				<td><label for="marca">Marca</label> <input type="text"
+					id="marca" name="marca" placeholder="Ex.: Nescau" /></td>
+			</tr>
+			<tr>
+				<td><label for="nome">Nome</label> <input type="text" id="nome"
+					name="nome" placeholder="Ex.: Achocolatado" /></td>
+			</tr>
+			<tr>
+				<td><label for="quantidade">Quantidade</label> <input type="text"
+					id="quantidade" name="quantidade" placeholder="Ex.: 3" /></td>
+			</tr>
+			<tr>
+				<td><label for="valor">Valor</label> <input type="text"
+					id="valor" name="valor" placeholder="Ex.: 15,99" /></td>
+			</tr>
+			<tr>
+				<td><label for="vencimento">Vencimento</label> <input
+					type="text" id="vencimento" name="vencimento"
+					placeholder="Ex.: 15/04/2023" /></td>
+			</tr>
+			<tr>
+				<td><label for="categoria">Categoria</label> <input type="text"
+					id="categoria" name="categoria" placeholder="Ex.: Doces" /></td>
+			</tr>
+		</table>
+		<input type="button" value="Adicionar" onclick="validar()" />
+	</form>
+	<script src="scripts/validador.js"></script>
+</body>
+</html>
