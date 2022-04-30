@@ -4,38 +4,29 @@ public class JavaBeans {
 	private String idcon;
 	private String nome;
 	private String fone;
+	private String fone2;
 	private String email;
-	private String obsPath;
-	
-	public JavaBeans(String idcon, String nome, String fone, String email, String obsPath) {
-		super();
-		this.idcon = idcon;
-		this.nome = nome;
-		this.fone = fone;
-		this.email = email;
-		this.obsPath = obsPath;
-	}
-
-	public JavaBeans(String idcon, String nome, String fone, String email) {
-		super();
-		this.idcon = idcon;
-		this.nome = nome;
-		this.fone = fone;
-		this.email = email;
-	}
+	private String cep;
+	private String obs;
 	
 	public JavaBeans() {
 		super();
-	}
-
-	public String getObsPath() {
-		return obsPath;
-	}
-
-	public void setObsPath(String obsPath) {
-		this.obsPath = obsPath;
+		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public JavaBeans(String idcon, String nome, String fone,  String fone2, String email,  String cep,  String obs) {
+		super();
+		this.idcon = idcon;
+		this.nome = nome;
+		this.fone = fone;
+		this.fone2 = fone2;
+		this.email = email;
+		this.cep = cep;
+		this.obs = obs;
+	}
+
+
 	public String getIdcon() {
 		return idcon;
 	}
@@ -54,10 +45,34 @@ public class JavaBeans {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
+	
+	public String getFone2() {
+		return fone2;
+	}
+	public void setFone2(String fone2) {
+		this.fone2 = fone2;
+	}
+	
+	
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	
+	public String getObs() {
+		return obs;
+	}
+	public void setObs(String obs) {
+		this.obs = obs;
+	}
+	
 }

@@ -30,3 +30,11 @@ h1{
 	width: 100px;
 	
 }
+
+#tabela th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	background-color: white;
+	color: black;
+}

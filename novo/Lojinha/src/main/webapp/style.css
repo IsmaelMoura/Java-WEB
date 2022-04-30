@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+
+body {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	background-color: grey;
+	text-align: center;
+	margin-left: auto;
+	margin-right: 50px;
+}
+.page{
+	text-align: center;
+	
+}
+
+.Botao1{
+	text-decoration: none;
+	background-color: red;
+	padding: 8px,13px,8px,13px;
+	color: black;
+	font-size:auto;
+	border-radius:15px;
+}
+
+h1{
+	color: blue;
+}
