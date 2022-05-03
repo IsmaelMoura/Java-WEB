@@ -28,7 +28,7 @@ public class DAO {
 	}
 
 	public void inserirContato(JavaBeans contato) {
-		String SQLinsert = "insert into contatos(nome,fone,email,obs) values (?,?,?,?);";
+		String SQLinsert = "insert into contatos(nome,fone,email,obs) values (?,?,?,?)";
 
 		try {
 			Connection con = conectar();
@@ -59,7 +59,7 @@ public class DAO {
 	public ArrayList<JavaBeans> listaContatos() {
 		ArrayList<JavaBeans> contatos = new ArrayList<JavaBeans>();
 		String sqlRead = "select * from contatos order by nome";
-		
+
 		try {
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(sqlRead);
@@ -78,6 +78,47 @@ public class DAO {
 		} catch (Exception e) {
 			System.out.println(e);
 			return null;
+		}
+	}
+
+	public void selecionarContato(JavaBeans contato) {
+		String sqlSelect = "select * from contatos where idcon=?";
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(sqlSelect);
+			pst.setString(1, contato.getIdcon());
+			ResultSet rs = pst.executeQuery();
+
+			while (rs.next()) {
+				contato.setIdcon(rs.getString(1));
+				contato.setNome(rs.getString(2));
+				contato.setFone(rs.getString(3));
+				contato.setEmail(rs.getString(4));
+			}
+			con.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+	}
+
+	public void editarContato(JavaBeans contato) {
+		String sqlUpdate = "update contatos set nome=?, fone=?, email=? where idcon=?";
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(sqlUpdate);
+
+			pst.setString(1, contato.getNome());
+			pst.setString(2, contato.getFone());
+			pst.setString(3, contato.getEmail());
+			pst.setString(4, contato.getIdcon());
+
+			pst.executeUpdate();
+
+			con.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
 		}
 	}
 }

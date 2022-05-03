@@ -27,7 +27,7 @@ public class DAO {
 	}
 	
 	// CRUD Create
-	public void inserirContato(JavaBeans contato) {
+	public void inserirContato(JavaBeans produto) {
 		String SQLinsert = "insert into contatos(nome, fone, email, obs) values(?, ?, ?, ?);";
 		
 		try {
@@ -39,7 +39,6 @@ public class DAO {
 			pst.setString(1, contato.getNome());
 			pst.setString(2, contato.getFone());
 			pst.setString(3, contato.getEmail());
-			pst.setString(4, contato.getObsPath());
 			
 			// Executar SQL
 			pst.executeUpdate();
