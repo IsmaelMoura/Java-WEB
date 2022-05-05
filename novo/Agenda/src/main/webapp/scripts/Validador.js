@@ -1,20 +1,16 @@
 /**
  * 
  */
- function validar(){
+function validar() {
 	let nome = frmContato.nome.value;
 	let fone = frmContato.fone.value;
-	if (nome === ""){
+	
+	if (nome === "") {
 		alert("Campo nome obrigatório");
 		frmContato.nome.focus();
-		}	
-	else
-	if (fone === ""){
+	} else if (fone === "") {
 		alert("Campo fone obrigatório");
 		frmContato.fone.focus();
-		}
-	else
-		document.forms["frmContato"].submit();	
-		
-	
+	} else
+		document.forms["frmContato"].submit();
 }
